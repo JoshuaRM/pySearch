@@ -1,4 +1,4 @@
-
+from urllib.parse import quote
 import urllib
 import webbrowser
 
@@ -24,6 +24,8 @@ class Search:
     
     #set search Query
     def setQuery(self, searchIn):
+        for term in range(len(searchIn)):
+            searchIn[term] = quote(searchIn[term].encode('utf8'))
         self.searchRaw = searchIn
     #end of setQuery
 
