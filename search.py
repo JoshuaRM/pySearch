@@ -1,6 +1,6 @@
-from urllib.parse import quote
 import urllib
 import webbrowser
+from urllib.parse import quote
 
 class Search:
     def __init__(self, searchIn = None, engineIn = "google", domainIn = "ca"):
