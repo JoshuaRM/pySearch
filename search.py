@@ -6,8 +6,8 @@ import re
 #print available broswers
 def printAvailableBrowsers(invalid):
         print("You have selected an invalid or unreigstered browser: " + invalid + ".\nHere is a list of available browsers")
-        for i in webbrowser._browsers:
-            print("\t"+i)
+        for browser in webbrowser._browsers:
+            print("\t"+browser)
 #end of printAvailableBrowsers
 
 

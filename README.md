@@ -37,6 +37,7 @@ python C:\Users\pySearch\pySearch.py  ( different path name where you have clone
  <li> -b changes the browser to search in. If an invalid browser is selected, a list of valid ones will be displayed.</li>
  </ol>
 
+Note for Windows users: browsers must be registered in environment variables to be used, or seen in available browsers.
 
 ## Running the tests
 
