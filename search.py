@@ -1,4 +1,3 @@
-
 import urllib
 import webbrowser
 import re
@@ -7,7 +6,7 @@ import re
 def printAvailableBrowsers(invalid):
         print("You have selected an invalid or unreigstered browser: " + invalid + ".\nHere is a list of available browsers")
         for browser in webbrowser._browsers:
-            print("\t"+browser)
+            print("\t" + browser)
 #end of printAvailableBrowsers
 
 
@@ -39,10 +38,10 @@ class Search:
 
     #set browser
     def setBrowser(self, browser):
-        regex = {'chrome':'(google|chrome|google chrome|google-chrome)', 
-                 'firefox':'(firefox|mozilla|mozilla firefox|mozilla-firefox)',
-                 'iexplore':'(ie|internet explorer|internet-explorer|iexplorer|iexplore)',
-                 'safari':'safari'}
+        regex = {'chrome': '(google|chrome|google chrome|google-chrome)',
+                 'firefox': '(firefox|mozilla|mozilla firefox|mozilla-firefox)',
+                 'iexplore': '(ie|internet explorer|internet-explorer|iexplorer|iexplore)',
+                 'safari': 'safari'}
         for i in regex:
             match = re.search(regex[i], browser, re.IGNORECASE)
             if match:
@@ -54,7 +53,7 @@ class Search:
     def getBrowser(self):
         try:
             webbrowser.get(self.browser).open_new_tab(self.url)
-        except:
+        except(webbrowser.Error):
             printAvailableBrowsers(self.browser)
     #end of get browser
 
